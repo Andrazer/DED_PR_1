@@ -11,8 +11,11 @@ public class PR1QueueTest {
     PR1Queue pr1q;
 
     private void fillQueue() {
-        for (char c = '0'; c < '9'; c++) {
-            pr1q.add(Character.valueOf(c));
+
+        int[] primos = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47};
+
+        for (int i : primos) {
+            pr1q.add(i);
 
         }
     }
@@ -32,16 +35,22 @@ public class PR1QueueTest {
 
     @org.junit.Test
     public void queueTest() {
-        assertEquals(this.pr1q.CAPACITY-1, this.pr1q.getQueue().size());
-        Assert.assertEquals(new Character('0'), pr1q.poll());
-        Assert.assertEquals(new Character('1'), pr1q.poll());
-        Assert.assertEquals(new Character('2'), pr1q.poll());
-        Assert.assertEquals(new Character('3'), pr1q.poll());
-        Assert.assertEquals(new Character('4'), pr1q.poll());
-        Assert.assertEquals(new Character('5'), pr1q.poll());
-        Assert.assertEquals(new Character('6'), pr1q.poll());
-        Assert.assertEquals(new Character('7'), pr1q.poll());
-        Assert.assertEquals(new Character('8'), pr1q.poll());
+        assertEquals(this.pr1q.CAPACITY, this.pr1q.getQueue().size());
+        Assert.assertEquals(2, (int) pr1q.poll());
+        Assert.assertEquals(3, (int) pr1q.poll());
+        Assert.assertEquals(5, (int) pr1q.poll());
+        Assert.assertEquals(7, (int) pr1q.poll());
+        Assert.assertEquals(11, (int) pr1q.poll());
+        Assert.assertEquals(13, (int) pr1q.poll());
+        Assert.assertEquals(17, (int) pr1q.poll());
+        Assert.assertEquals(19, (int) pr1q.poll());
+        Assert.assertEquals(23, (int) pr1q.poll());
+        Assert.assertEquals(29, (int) pr1q.poll());
+        Assert.assertEquals(31, (int) pr1q.poll());
+        Assert.assertEquals(37, (int) pr1q.poll());
+        Assert.assertEquals(41, (int) pr1q.poll());
+        Assert.assertEquals(43, (int) pr1q.poll());
+        Assert.assertEquals(47, (int) pr1q.poll());
         assertEquals(0, this.pr1q.getQueue().size());
     }
 

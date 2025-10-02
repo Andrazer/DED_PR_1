@@ -12,8 +12,11 @@ public class PR1StackTest {
     PR1Stack pr1q;
 
     private void fillStack() {
-        for (char c = '0'; c < '9'; c++) {
-            pr1q.push(Character.valueOf(c));
+
+        int[] primos = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47};
+
+        for (int i : primos) {
+            pr1q.push(i);
         }
     }
 
@@ -35,16 +38,22 @@ public class PR1StackTest {
     @org.junit.Test
     public void stackTest() {
 
-        assertEquals(this.pr1q.CAPACITY-1, this.pr1q.getStack().size());
-        Assert.assertEquals(new Character('8'), pr1q.pop());
-        Assert.assertEquals(new Character('7'), pr1q.pop());
-        Assert.assertEquals(new Character('6'), pr1q.pop());
-        Assert.assertEquals(new Character('5'), pr1q.pop());
-        Assert.assertEquals(new Character('4'), pr1q.pop());
-        Assert.assertEquals(new Character('3'), pr1q.pop());
-        Assert.assertEquals(new Character('2'), pr1q.pop());
-        Assert.assertEquals(new Character('1'), pr1q.pop());
-        Assert.assertEquals(new Character('0'), pr1q.pop());
+        assertEquals(this.pr1q.CAPACITY, this.pr1q.getStack().size());
+        Assert.assertEquals(47, (int) pr1q.pop());
+        Assert.assertEquals(43, (int) pr1q.pop());
+        Assert.assertEquals(41, (int) pr1q.pop());
+        Assert.assertEquals(37, (int) pr1q.pop());
+        Assert.assertEquals(31, (int) pr1q.pop());
+        Assert.assertEquals(29, (int) pr1q.pop());
+        Assert.assertEquals(23, (int) pr1q.pop());
+        Assert.assertEquals(19, (int) pr1q.pop());
+        Assert.assertEquals(17, (int) pr1q.pop());
+        Assert.assertEquals(13, (int) pr1q.pop());
+        Assert.assertEquals(11, (int) pr1q.pop());
+        Assert.assertEquals(7, (int) pr1q.pop());
+        Assert.assertEquals(5, (int) pr1q.pop());
+        Assert.assertEquals(3, (int) pr1q.pop());
+        Assert.assertEquals(2, (int) pr1q.pop());
         assertEquals(0, this.pr1q.getStack().size());
     }
 }
