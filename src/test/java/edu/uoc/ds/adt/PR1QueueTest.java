@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 
+import edu.uoc.ds.adt.PR1Aux;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -12,13 +14,18 @@ public class PR1QueueTest {
 
     private void fillQueue() {
 
-        int[] primos = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47};
+        int i = 2;
 
-        for (int i : primos) {
-            pr1q.add(i);
+        while (pr1q.getQueue().size() < pr1q.CAPACITY) {
 
+            if (PR1Aux.isPrimo(i)) {
+                pr1q.add(i);
+            }
+
+            i++;
         }
     }
+
     @Before
     public void setUp() {
         this.pr1q = new PR1Queue();
