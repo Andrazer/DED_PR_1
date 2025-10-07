@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 
 public class WeatherStationData {
 
+    //Crea un objeto con cada linea del csv y los setters correspondientes
+
     private LocalDateTime lastUpdated;
     private String stationName;
     private String province;
@@ -46,5 +48,19 @@ public class WeatherStationData {
         return latitude;
     }
 
+    public double getAvgAirTemperature() {
+        return avgAirTemperature;
+    }
 
+    public double getPrecipitation() {
+        return precipitation;
+    }
+
+    public double getMinAirTemperature() {
+        return minAirTemperature;
+    }
+
+    public double getMaxAirTemperature() {
+        return maxAirTemperature;
+    }
 }
