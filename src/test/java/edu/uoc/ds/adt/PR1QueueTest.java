@@ -14,6 +14,8 @@ public class PR1QueueTest {
 
     private void fillQueue() {
 
+        // Crea la cola de números por medio de una función auxiliar
+
         int i = 2;
 
         while (pr1q.getQueue().size() < pr1q.CAPACITY) {

@@ -15,6 +15,8 @@ public class PR1StackTest {
 
     private void fillStack() {
 
+        // Crea la pila de números primos por medio de una función auxiliar
+
         int i = 2;
 
         while (pr1q.getStack().size() < pr1q.CAPACITY) {
