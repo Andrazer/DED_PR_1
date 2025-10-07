@@ -1,6 +1,4 @@
-# Práctica 1 - Estructuras de Datos (UOC)
-
-Práctica 1 de la asignatura *Diseño y Estructuras de Datos* del *Grado en Ingeniería Informática*
+## *Práctica 1 de la asignatura Diseño y Estructuras de Datos del Grado en Ingeniería Informática*
 ---
 
 ## Contenidos principales
