@@ -1,9 +1,9 @@
-# 📘 Práctica 1 - Estructuras de Datos (UOC)
+# Práctica 1 - Estructuras de Datos (UOC)
 
-Este repositorio contiene la *Práctica 1* de la asignatura *Diseño y Estructuras de Datos* del *Grado en Ingeniería Informática* de la *UOC*  (2025-26)
+Práctica 1 de la asignatura *Diseño y Estructuras de Datos* del *Grado en Ingeniería Informática* de la *UOC*  (2025-26)
 ---
 
-## 🧠 Contenidos principales
+## Contenidos principales
 
 - Implementación de una cola mediante `QueueArrayImpl`.
 - Cálculo de medias de datos meteorológicos.
