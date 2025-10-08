@@ -9,13 +9,13 @@ import java.io.IOException;
 
 public class CSVReader {
 
-    public static CSVParser getCVSParser(String s) {
+    public static CSVParser getCVSParser(String fileName) {
 
         // Devuelve un CSVParser con los datos del archivo CSV
 
         try {
 
-            FileReader reader = new FileReader("src/test/java/edu/uoc/ds/adt/weatherData.csv");
+            FileReader reader = new FileReader("src/test/java/edu/uoc/ds/adt/"+fileName);
             CSVFormat format = CSVFormat.DEFAULT.builder().setHeader().setSkipHeaderRecord(true).build();
 
             return new CSVParser(reader, format);
